@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do Task Application</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Link Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-do Task Application</h1>
+    <div class="menu">
+      <button id="addTaskBtn" onclick="showAddTaskForm()">Add Task</button>
+      <button id="deleteTaskBtn" onclick="showDeleteTask()">Delete Task</button>
+      <button id="taskListBtn" onclick="showTaskList()">Task List</button>
+    </div>
+
+    <div id="addTask" class="hidden">
+      <form id="taskForm">
+        <label for="taskTitle">Task Title:</label>
+        <input type="text" id="taskTitle" name="taskTitle" required><br>
+        <label for="taskDescription">Task Description:</label>
+        <textarea id="taskDescription" name="taskDescription" required></textarea><br>
+        <button type="button" onclick="addTask()">Add Task</button>
+      </form>
+    </div>
+
+    <div id="deleteTask" class="hidden">
+      <h2>Delete Task</h2>
+      <ul id="deleteTaskList">
+        <!-- Task list will be populated here -->
+      </ul>
+    </div>
+
+    <div id="taskList" class="hidden">
+      <h2>Task List</h2>
+      <ul id="taskListItems">
+        <!-- Task list will be dynamically populated here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
